@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Elements and Web Components</title>
+</head>
+<body>
+    <my-element></my-element>
+
+    <script>
+        class MyElement extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({ mode: 'open' });
+                this.shadowRoot.innerHTML = `
+                    <style>
+                        :host {
+                            display: block;
+                            padding: 10px;
+                            background-color: #f0f0f0;
+                            border: 1px solid #ccc;
+                        }
+                    </style>
+                    <div>
+                        <h2>Hello from MyElement</h2>
+                        <p>This is a custom element with Shadow DOM.</p>
+                    </div>
+                `;
+            }
+
+            connectedCallback() {
+                console.log('MyElement added to the page.');
+            }
+
+            disconnectedCallback() {
+                console.log('MyElement removed from the page.');
+            }
+
+            adoptedCallback() {
+                console.log('MyElement moved to a new page.');
+            }
+        }
+
+        customElements.define('my-element', MyElement);
+    </script>
+</body>
+</html>

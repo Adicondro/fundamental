@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML for Accessibility</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .high-contrast {
+            color: #000;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="main-title">Accessibility in HTML</h1>
+    </header>
+    
+    <main>
+        <section aria-labelledby="aria-section">
+            <h2 id="aria-section">Using ARIA Attributes for Accessibility</h2>
+            <p id="aria-description">ARIA attributes help improve accessibility for users with disabilities.</p>
+            <div aria-labelledby="main-title" aria-describedby="aria-description">
+                <p>This div is described by the main title and the ARIA description.</p>
+            </div>
+            <div aria-hidden="true">
+                <p>This content is hidden from screen readers.</p>
+            </div>
+        </section>
+        
+        <section aria-labelledby="alt-text-section">
+            <h2 id="alt-text-section">Proper Use of Alt Text for Images</h2>
+            <img src="example.jpg" alt="A descriptive text about the image">
+        </section>
+        
+        <section aria-labelledby="form-labels-section">
+            <h2 id="form-labels-section">Labels for Form Elements</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        
+        <section aria-labelledby="keyboard-navigation-section">
+            <h2 id="keyboard-navigation-section">Keyboard Navigation Support and Focus Management</h2>
+            <a href="#main-title" tabindex="0">Go to Main Title</a>
+        </section>
+        
+        <section aria-labelledby="color-contrast-section">
+            <h2 id="color-contrast-section">Ensuring Color Contrast for Readability</h2>
+            <p class="high-contrast">This text has high contrast for better readability.</p>
+        </section>
+    </main>
+</body>
+</html></section>

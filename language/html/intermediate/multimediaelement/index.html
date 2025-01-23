@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia Elements</title>
+</head>
+<body>
+    <h1>Multimedia Elements</h1>
+
+    <h2>Embedding Audio</h2>
+    <audio controls>
+        <source src="audio-file.mp3" type="audio/mpeg">
+        <source src="audio-file.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h2>Embedding Video</h2>
+    <video controls autoplay loop muted>
+        <source src="video-file.mp4" type="video/mp4">
+        <source src="video-file.ogg" type="video/ogg">
+        Your browser does not support the video element.
+    </video>
+
+    <h2>SVG for Vector Graphics</h2>
+    <h3>Inline SVG</h3>
+    <svg width="100" height="100" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+    </svg>
+
+    <h3>External SVG</h3>
+    <img src="image.svg" alt="External SVG">
+
+    <h2>Embedding Google Maps</h2>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019112374847!2d144.9630579153167!3d-37.81410797975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d1e5d1b1a1e!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1611819391234!5m2!1sen!2sau"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+</body>
+</html>

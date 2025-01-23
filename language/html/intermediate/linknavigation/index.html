@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links and Navigation</title>
+    <style>
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>6. Links and Navigation</h1>
+    <h2>Advanced links</h2>
+    <ul>
+        <li><a href="https://www.example.com" target="_blank">External Link</a></li>
+        <li><a href="#section1">Anchor Link to Section 1</a></li>
+    </ul>
+
+    <h2>Navigation menus</h2>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Services</a>
+                <div class="dropdown-content">
+                    <a href="#service1">Service 1</a>
+                    <a href="#service2">Service 2</a>
+                    <a href="#service3">Service 3</a>
+                </div>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h2>Link accessibility</h2>
+    <ul>
+        <li><a href="#maincontent" aria-label="Skip to main content">Skip to main content</a></li>
+        <li><a href="#section2" aria-label="Go to section 2">Anchor Link with Description</a></li>
+    </ul>
+
+    <div id="maincontent">
+        <h3 id="section1">Section 1</h3>
+        <p>This is section 1 content.</p>
+        <h3 id="section2">Section 2</h3>
+        <p>This is section 2 content.</p>
+    </div>
+</body>
+</html></div>
