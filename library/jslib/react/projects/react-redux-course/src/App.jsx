@@ -1,13 +1,18 @@
 import React from "react";
+import Box from "./components/Box";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
-const App = () => {
+function App() {
   return (
     <>
-      <div>
-        <h1 class="text-3xl font-bold underline">Hello world!</h1>
-      </div>
+      <Nav />
+      <main className="min-h-[90vh]">
+        <Box />
+      </main>
+      <Footer />
     </>
   );
-};
+}
 
 export default App;
