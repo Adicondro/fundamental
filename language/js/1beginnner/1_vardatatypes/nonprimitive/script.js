@@ -33,10 +33,13 @@ console.log(greet('John'));
 
 const map = new Map();
 map.set('name', 'John');
+map.set('age', 30, 35, 40);
 map.set(1, 'One');
 
-console.log(map.get('name'));
-console.log(map.has(1));
+console.log(map.get('name')); // output: John
+console.log(map.get('John')); // output: undefined (not name)
+console.log(map.get(age)); // output: 30 not 35 or 40, why? because it only takes the first value
+console.log(map.has(1)); // output: true
 
 // set
 
@@ -56,4 +59,4 @@ console.log(today.getFullYear());
 // regex
 const regex = /hello/i;
 const str = 'Hello, World!';
-console.log(regex.test(str));
+console.log(regex.test(str)); // output: true
