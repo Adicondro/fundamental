@@ -61,12 +61,26 @@ function functionScopeExample() {
         const functionConst = "I am block scoped";
         console.log(functionVar); // Output: I am function scoped
     }
-    console.log(functionVar); // Output: I am function scoped (masih bisa diakses)
+    console.log(functionVar); // Output: I am function scoped (masih bisa diakses), this is because var is function scoped
     console.log(functionConst); // Error: functionConst is not defined
 }
 
 functionScopeExample();
 console.log(functionVar); // Error: functionVar is not defined
+console.log(functionConst); // Error: functionConst is not defined
+
+
+function testblockScope() {
+    var functionTest = "I am function scoped";
+    const functionConst = "I am block scoped";
+    let functionLet = "I am block scoped";
+}
+
+console.log(functionTest); // Error: functionTest is not defined
+console.log(functionConst); // Error: functionConst is not defined
+console.log(functionLet); // Error: functionLet is not defined
+
+// how to access variable in different scope, you can use closure, callback, or pass the variable as a parameter
 
 // internal scope
 // global scope -> bisa semua karena kamu scope secara global

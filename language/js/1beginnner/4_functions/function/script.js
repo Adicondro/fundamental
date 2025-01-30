@@ -1,32 +1,61 @@
-// Function to add two numbers
-function add(a, b) {
-    return a + b;
+// function = A Section of reusable code. Declare code once, use it whenever u want. call the function to execute code
+
+// function happyBirthday(username, age){
+//     console.log("Happy Birthday To You");
+//     console.log("Happy Birthday To You");
+//     console.log(`Happy Birthday To You ${username}`);
+//     console.log("Happy Birthday To You");
+//     console.log(`You are ${age} Years Old`);
+// }
+
+// happyBirthday("Adicondro", 21);
+// happyBirthday("Niki", 20);
+// happyBirthday("Patrick", 16);
+
+
+function add(x, y){
+    return x + y;
+
+    // Result itu buat ngembaliin data ke function nya setelah dioperasikan (+, -, *, /)
+
 }
 
-// Function to subtract two numbers
-function subtract(a, b) {
-    return a - b;
+
+function substract(x, y){
+    return x - y;
+
+    // Result itu buat ngembaliin data ke function nya setelah dioperasikan (+, -, *, /)
+
 }
 
-// Function to multiply two numbers
-function multiply(a, b) {
-    return a * b;
+function multipy(x, y){
+    return x * y;
+
+    // Result itu buat ngembaliin data ke function nya setelah dioperasikan (+, -, *, /)
+
 }
 
-// Function to divide two numbers
-function divide(a, b) {
-    if (b === 0) {
-        return 'Error: Division by zero';
+function divide(x, y){
+    return x / y;
+}
+
+function isEven(number){
+    if(number % 2 == 0){
+        return true;
+    } else {
+        return false;
     }
-    return a / b;
 }
 
-// Function to find the maximum of two numbers
-function max(a, b) {
-    return a > b ? a : b;
+function isValidEmail(email){
+    if (email.includes("@")){
+        return true;
+    } else{
+        return false;
+    }
 }
 
-// Function to find the minimum of two numbers
-function min(a, b) {
-    return a < b ? a : b;
-}
+console.log(divide(2,3));
+console.log(isEven(12));
+console.log(isValidEmail("adicondro@gmail.com"))
+
