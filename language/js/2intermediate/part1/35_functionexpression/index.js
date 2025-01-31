@@ -16,4 +16,3 @@ const squares = number.map(function (element){
 });
 
 console.log(squares);
-

@@ -9,11 +9,20 @@
 // Function
 
 
+const greet = function(name) {
+    console.log("Hello " + name);
+}
+
+greet("Alice");
 
 
+function greet2 (name) {
+    console.log("Hello " + name);
+}
 
+greet2("Bob");
 
-
+let u
 
 
 
@@ -49,6 +58,15 @@ fetchData(() => {
 
 
 // Function
+
+
+let number = [1, 2, 3, 4, 5, 6];
+
+const pangkat = number.map((element) => {
+    return Math.pow(element, 4);
+})
+
+console.log(pangkat);
 
 // Parameters, rest, spread
 
