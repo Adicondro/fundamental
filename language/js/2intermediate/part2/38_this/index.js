@@ -2,11 +2,20 @@
 // the object depends on the immediate context
 // person.name = this.name
 
+// const person1 = {
+//     name: "Spongebob",
+//     favFood: "Hamburger",
+//     sayHello: function(){
+//         console.log(`Hi, i Am ${this.name}`)}
+// }
+
+
 const person1 = {
     name: "Spongebob",
     favFood: "Hamburger",
-    sayHello: function(){
-        console.log(`Hi, i Am ${this.name}`)}
+    sayHello: () => {
+        console.log(`Hi, i Am ${this.name}`)
+    }
 }
 
 person1.sayHello();
