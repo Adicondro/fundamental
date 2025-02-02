@@ -1,13 +1,12 @@
-import React from "react";
+import React from 'react'
 
-const ContactMeButton = () => {
+const ContactMeButton = (props) => {
+
   return (
-    <div>
-      <button className="bg-gray-900 text-white p-2 rounded-md hover:bg-gray-700">
-        Contact Me
+    <button className="bg-gray-900 text-white p-2 rounded-md hover:bg-gray-700">
+        {props.children}
       </button>
-    </div>
-  );
-};
+  )
+}
 
 export default ContactMeButton;

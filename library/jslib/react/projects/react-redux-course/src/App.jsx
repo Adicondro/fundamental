@@ -1,15 +1,11 @@
 import React from "react";
-import Box from "./components/Box";
-import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
-      <Nav />
-      <main className="min-h-[90vh]">
-        <Box />
-      </main>
+      <Header />
       <Footer />
     </>
   );
