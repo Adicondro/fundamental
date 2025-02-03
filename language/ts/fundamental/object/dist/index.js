@@ -4,6 +4,9 @@ let employee = {
     // name: undefined, it can't be undefined
     name: 'John',
     age: 30,
-    designation: 'Software Engineer'
+    designation: 'Software Engineer',
+    retire: (date) => {
+        console.log('Retiring on', date);
+    }
 };
 // employee.name = 'Mosh' // in js it will work but in ts it will throw error, because we have not defined name property in employee object
