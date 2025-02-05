@@ -2,7 +2,7 @@
 
 // literal types
 
-// nullable types
+// nullable type
 
 // type aliases
 
