@@ -24,14 +24,18 @@ const greet = function(name) {
 
 greet("Alice");
 
+const trying = () => {
+    console.log("Adicondro")
+}
+
+trying();
+
 
 function greet2 (name) {
     console.log("Hello " + name);
 }
 
 greet2("Bob");
-
-let u
 
 
 
@@ -65,6 +69,23 @@ while(i < 10) {
 // Switch Case
 
 // Arrow Function
+
+const arrowFunction = () =>{
+    for (let i = 0; i <10; i++) {
+        console.log(i);
+    };
+}
+
+
+const fruit1 = [apple, banana, tomato];
+
+const mappingFruit = fruit1.map( () => {
+    return Math.pow(element, 4);
+});
+
+
+
+console.log(mappingFruit);
 
 // Callbacks
 
@@ -104,6 +125,8 @@ console.log(pangkat);
 
 
 // Let, var, const scope
+
+
 
 // Global Local Scope
 

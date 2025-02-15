@@ -83,5 +83,4 @@ function joinString(...strings){
 }
 
 const name = joinString("Adicondro", "Yusuf");
-
 console.log(name);

@@ -1,7 +1,6 @@
 let fruits = ["apple", "orange", "banana", "coconut"];
 
-fruits.forEach(capitalize);
-fruits.forEach(display);
+
 
 function upperCase(element, index, array){
     array[index] = element.toUpperCase();
@@ -18,3 +17,6 @@ function capitalize(element, index, array){
 function display(element){
     console.log(element);
 }
+
+fruits.forEach(capitalize);
+fruits.forEach(display);
