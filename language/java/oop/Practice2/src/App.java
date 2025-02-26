@@ -16,6 +16,16 @@ class Player {
         this.health = health;
     }
 
+    void attack(Player opponent) {
+        double attackPower = this.weapon.attackPower;
+        System.out.println(this.name + " is attacking " + opponent.name + " with power " + attackPower);
+        opponent.defence(attackPower);
+    }
+
+    void defence(){
+        System.out.println(this.name + " is defending with power " + this.armor.defencePower);
+    }
+
     void equipWeapon(Weapon weapon) {
         this.weapon = weapon;
     }
@@ -73,7 +83,7 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         // Membuat object player
-        Player player1 = new Player("Ucup", 74 );
+        Player player1 = new Player("Ucup", 74);
         Player player2 = new Player("Farah", 100);
 
         // Membuat object weapon
@@ -95,5 +105,12 @@ public class App {
         player2.equipWeapon(ketapel);
         player2.equipArmor(kaos);
         player2.display();
+
+
+        // Pertempuran
+        System.out.println("\nBattle");
+        player1.attack(player2);
+
+
     }
 }
