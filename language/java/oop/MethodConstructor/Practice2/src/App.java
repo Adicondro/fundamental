@@ -16,15 +16,7 @@ class Player {
         this.health = health;
     }
 
-    void attack(Player opponent) {
-        double attackPower = this.weapon.attackPower;
-        System.out.println(this.name + " is attacking " + opponent.name + " with power " + attackPower);
-        opponent.defence(attackPower);
-    }
-
-    void defence(){
-        System.out.println(this.name + " is defending with power " + this.armor.defencePower);
-    }
+    // Action 1
 
     void equipWeapon(Weapon weapon) {
         this.weapon = weapon;
@@ -39,6 +31,28 @@ class Player {
         System.out.println("Health : " + this.health);
         this.weapon.display();
         this.armor.display();
+    }
+
+    // Action 2
+
+    void attack(Player opponent) {
+        double attackPower = this.weapon.attackPower;
+        System.out.println(this.name + " is attacking " + opponent.name + " with power " + attackPower);
+        opponent.defence(attackPower);
+    }
+
+    void defence(double attackPower) {
+
+        // Akan mengambil damage
+        double damage;
+        if (this.armor.defencePower < attackPower) {
+            damage = attackPower - this.armor.defencePower;
+        } else {
+            damage = 0;
+        }
+
+        this.health -= damage;
+        System.out.println(this.name + " gets damage " + damage);
     }
 }
 
@@ -82,6 +96,8 @@ class Armor {
 public class App {
     public static void main(String[] args) throws Exception {
 
+        // CREATE SCENE
+
         // Membuat object player
         Player player1 = new Player("Ucup", 74);
         Player player2 = new Player("Farah", 100);
@@ -94,7 +110,7 @@ public class App {
         Armor bajuBesi = new Armor("Baju Besi", 10);
         Armor kaos = new Armor("Kaos", 0);
 
-        // Equip senjata dan armor
+        // EQUIP SCENE
 
         // Player 1
         player1.equipWeapon(pedang);
@@ -106,11 +122,19 @@ public class App {
         player2.equipArmor(kaos);
         player2.display();
 
-
-        // Pertempuran
+        // WAR SCENE
         System.out.println("\nBattle");
+
+        // Episode 1
+        System.out.println("\nEpisode - 1\n");
         player1.attack(player2);
+        player1.display();
+        player2.display();
 
-
+        // Episode 2
+        System.out.println("\nEpisode - 2\n");
+        player2.attack(player1);
+        player1.display();
+        player2.display();
     }
 }
