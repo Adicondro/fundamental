@@ -57,10 +57,10 @@ public class App {
         // Membuat objek dengan konstruktor yang benar
         Data object = new Data(10, 20, 30.0);
 
-        // PUBLIC
+        // Public
         // Read and Write dengan Public
-        object.intPublic = 10; // Write
-        System.out.println("Public Example : " + object.intPublic); // Read
+        object.intPublic = 10; // Write (Menggantinya/Write di main, dan bisa diganti kapan saja) -> Beresiko
+        System.out.println("Public Example : " + object.intPublic); // Read (Membaca/Read nya di main, dan bisa dibaca kapan saja oleh mesin) -> Beresiko
 
         // Private
         // Read Only (Menggunakan Getter)

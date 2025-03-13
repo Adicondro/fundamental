@@ -27,6 +27,8 @@ class Player {
         System.out.println("Attack\t\t: " + this.getAttackPower());
     }
 
+    // Untuk apa di set?
+
     public void setArmor(Armor armor) {
         this.armor = armor;
     }
@@ -56,6 +58,8 @@ class Weapon {
         this.name = name;
         this.attack = attack;
     }
+
+    // Untuk apa di get
 
     public int getAttack() {
         return this.attack;

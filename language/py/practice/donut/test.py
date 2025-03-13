@@ -36,7 +36,7 @@ def render_frame(A, B):
             luminance = max(0, min(11, luminance if L > 0 else 0))
             if 0 <= xp < width and 0 <= yp < height and ooz > zbuffer[pos]:
                 zbuffer[pos] = ooz
-                output[pos] = ".,-~:;=!*#$@"[luminance]
+                output[pos] = "733visual#$@"[luminance] #".,-~:;=!*#$@"
 
     # Clear screen and print frame
     os.system('cls' if os.name == 'nt' else 'clear')
