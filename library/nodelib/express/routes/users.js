@@ -17,6 +17,7 @@ router.post("/", (req, res) => {
 router
   .route("/:id")
   .get((req, res) => {
+    console.log(req.user);
     res.send(`User ID is ${req.params.id}`);
   })
   .put((req, res) => {
@@ -26,17 +27,23 @@ router
     res.send(`DeleteUser ID is ${req.params.id}`);
   });
 
-router.get("/id", (req, res) => {
-  res.send(`User ID ${req.params.id}`);
+const users = [{ name: "Kyle" }, { name: "Sally" }];
+router.param("id", (req, res, next, id) => {
+  req.user = users[id];
+  next();
 });
 
-router.put("/:id", (req, res) => {
-  res.send(`Update User ID with ${req.params.id}`);
-});
+// router.get("/id", (req, res) => {
+//   res.send(`User ID ${req.params.id}`);
+// });
 
-router.delete("/:id", (req, res) => {
-  res.send(`DeleteUser ID is ${req.params.id}`);
-});
+// router.put("/:id", (req, res) => {
+//   res.send(`Update User ID with ${req.params.id}`);
+// });
+
+// router.delete("/:id", (req, res) => {
+//   res.send(`DeleteUser ID is ${req.params.id}`);
+// });
 
 // It will overwrite this
 // router.get('/new', (req, res) => {
