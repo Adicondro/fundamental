@@ -5,9 +5,9 @@ router.get("/", (req, res) => {
   res.send("Users List");
 });
 
-// router.get('/new', (req, res) => {
-//     res.send('New User Form');
-// })
+router.get("/new", (req, res) => {
+  res.render("users/new", { firstName: "Kyle" });
+});
 
 // Cannot find
 router.post("/", (req, res) => {
