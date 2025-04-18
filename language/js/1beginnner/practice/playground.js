@@ -1,67 +1,168 @@
+// Divider
+
+const dividerAuto = (subjectName) => {
+  console.log(`==============${subjectName}===============`);
+};
+
 // Let, Const, Var
 
-let name = "Alice";
+dividerAuto("Variable");
 
-// Non Primitive Variable
+let username = "Adicondro";
+const pi = Math.random();
 
+const combinedString = username + pi;
 
+console.log(combinedString);
+
+// Non Primitive Variable (Object, Function, Map, Set, Date, Regex)
+
+dividerAuto("Non Primitive");
+
+// // Object
+
+const userData = {
+  name: "Adicondro",
+  age: 15,
+  wordUsed: (name) => {
+    return `Fuck you ${name}`;
+  },
+};
+
+const User2 = userData.wordUsed("Adicondro");
+
+console.log(User2);
+
+// // Arrays
+
+const aotCharacter = ["Eren", "Mikasa", "Levi", "Armin", "Erwin"];
+console.log(aotCharacter);
+
+// //
+
+const sayHello = function (name) {
+  return `My name is ${name}`;
+};
+
+const User1 = sayHello("Adicondro");
+
+console.log(User1);
 
 // Primitive Variable
 
+dividerAuto("Primitive");
+
+let num = 10;
+result = num + 10;
+
+console.log(result);
+
 // Operators
+dividerAuto("Operators");
+let var1 = 10;
+let var2 = 2;
 
-let a = 14;
-let b = 5;
-
-console.log(a + b);
+var1 *= var2;
+console.log(var1);
 
 // Function (Expression, Declaration)
 
+dividerAuto("Functions");
+console.log(sumDeclaration(10, 2));
 
-const greet = function(name) {
-    console.log("Hello " + name);
+function sumDeclaration(a, b) {
+  return a + b;
 }
 
-greet("Alice");
+const sum = function (a, b) {
+  return a + b;
+};
 
-const trying = () => {
-    console.log("Adicondro")
-}
-
-trying();
-
-
-function greet2 (name) {
-    console.log("Hello " + name);
-}
-
-greet2("Bob");
-
-
-
-
+const resultFunctions = sum(1, 2);
+console.log(resultFunctions);
 
 // If else
 
-let age = 10;
+dividerAuto("If else");
 
-if(age > 18) {
-    console.log("Adult");
-}else{
-    console.log("You're not adult");;
-}
+const checkEven = (num) => {
+  if (num % 0) {
+    console.log("Yes your number is even");
+  } else {
+    console.log("Netnot");
+  }
+};
+
+checkEven(2);
 
 // Loops
 
-for (let i = 0; i < 10; i++) {
+dividerAuto("Loops");
+
+// // Loops with i
+
+for (let i = 0; i <= 10; i++) {
+  if (i % 2 == 0) {
     console.log(i);
+  } else {
+    console.log("Ganjil");
+  }
 }
 
-// While loop
+const water = ["Aqua", "Ades", "Le Minerale"];
 
-while(i < 10) {
-    console.log(i);
-    i++;
+for (let i = 0; i <= water.length; i++) {
+  console.log(`${i} contains ${water[i]}`);
+}
+
+// // loops with array of
+
+const seriesNetflix = ["King of Bla", "Dark", "Shawshank Redemption"];
+
+for (const value of seriesNetflix) {
+  console.log(`nilai ${seriesNetflix[value]}, Ada film ${value}`);
+}
+
+// // loops with array in
+
+const kataKasar = ["Kontol", "Jembut", "Anjing"];
+
+for (const kata in kataKasar) {
+  console.log(`index ${kata}, nilai ${kataKasar[kata]}`);
+}
+
+// // nested loopså
+
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+for (let row = 0; row < matrix.length; row++) {
+  for (let col = 0; col < matrix[row].length; col++) {
+    console.log(`Value at matrix[${row}][${col}] is ${matrix[row][col]}`);
+  }
+}
+// // Loops with Object (Loop In)
+
+const person = {
+  name: "Adicondro",
+  age: 15,
+  hobby: "Coding",
+};
+
+for (const key in person) {
+  console.log(`${key} contains ${person[key]}`);
+}
+
+// // Loops with Object (Loop In)
+
+// While loop
+let i = 0;
+while (i < 10) {
+  console.log(`Iteration : ${i}`);
+  i++;
 }
 
 // Do while
@@ -70,114 +171,18 @@ while(i < 10) {
 
 // Arrow Function
 
-const arrowFunction = () =>{
-    for (let i = 0; i <10; i++) {
-        console.log(i);
-    };
-}
-
-
-const fruit1 = [apple, banana, tomato];
-
-const mappingFruit = fruit1.map( () => {
-    return Math.pow(element, 4);
-});
-
-
-
-console.log(mappingFruit);
-
 // Callbacks
-
-function fetchData(callback) {
-
-    setTimeout(() => {        
-        console.log("Data loaded!"); // Muncul setelah proses selesai
-        callback();
-    }, 2000);
-}
-
-console.log("Start");
-fetchData(() => {
-    console.log("End");
-});
-
-
 
 // Function
 
-
-let number = [1, 2, 3, 4, 5, 6];
-
-const pangkat = number.map((element) => {
-    return Math.pow(element, 4);
-})
-
-console.log(pangkat);
-
 // Parameters, rest, spread
 
-
-
-
-
-
-
-
 // Let, var, const scope
-
-
 
 // Global Local Scope
 
 // Block Scope, Function Scope
 
-
-
-
-
 // Closures
 
-let count = 0; // Variabel global
-
-function increment() {
-    count++; // Bisa diubah di mana saja
-    console.log(count);
-}
-
-increment(); // 1
-increment(); // 2
-
-count = 100; // ❌ Masalah! Variabel bisa diubah dari luar
-increment(); // 101 (tidak sesuai harapan)
-
-
-// Solusi: Closure
-
-
-function solution() {
-    let count = 0; // Variabel lokal
-
-    return () => {
-        count++; // Bisa diubah hanya di dalam fungsi
-        console.log(count);
-    };
-}   
-
-solution(); // Closure, result: 1
-solution(); // Closure, result: 2
-solution(); // Closure, result: 3
-
-count = 100; // ❌ Masalah! Variabel tidak bisa diubah dari luar
-
 // Arrays
-
-const fruit = ["Apple", "Banana", "Cherry", "Durian", "Elderberry"];
-
-fruit.push("Fig");
-
-fruit[0] = "Avocado";
-
-fruit.map((element) => {
-    console.log(element);
-});
