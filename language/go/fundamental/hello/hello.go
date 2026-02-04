@@ -12,5 +12,4 @@ func main() {
 	var nama1 = "Adicondro"
 	// fmt.Println(nama)
 	fmt.Printf("Hallo nama saya "+nama1+" Bertipe data %T \n", nama1)
-	fmt.Println(kill)
 }
