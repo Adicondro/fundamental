@@ -15,9 +15,13 @@ class Player{
     private Armor armor;
     private Weapon weapon; // Mengambil tipe data object
 
+    // ==== 1. BASIC PART ====
+
     //    Constructor -> Menggunakan parameter nama karena semua harus di inisialisasi, namun yang di set hanya nama
     public Player(String name){
-        this.name = name;
+        this.name = name; // KENAPA GAK PAKAI SET NAME AJA, NANTI DIBAWAH SET NAME JADI, PLAYER1.SETNAME("XXX")?
+        // APAKAH MEMANG SETTER ITU DIPAKAI UNTUK MENGEDIT SAJA, BUKAN MENGINISIALISASI NILAI AWAL?
+        // ATAU APAKAH SETTER ITU HANYA DIPAKAI UNTUK OBJEK YANG DI SET DILUAR DARI CONSTRUCTOR SEPERTI SETARMOR SETWEAPON?
         this.baseHealth = 100;
         this.baseAttack = 100;
         this.level = 1;
@@ -26,15 +30,18 @@ class Player{
         this.isAlive = true;
     }
 
-    public String getName(){
-        return this.name;
+    //    Set Armor Method
+
+    public void setArmor(Armor armor){
+        this.armor = armor;
     }
 
-    public int getHealth(){
-        return this.maxHealth() - this.totalDamage;
+    //    Set Weapon Method
+    public void setWeapon(Weapon weapon){
+        this.weapon = weapon;
     }
 
-    //    Display method
+    //    Display method -> Print di system semua info ini
     public void display(){
         System.out.println("Player: " + this.name);
         System.out.println("Level: " + this.level);
@@ -43,21 +50,68 @@ class Player{
         System.out.println("Status: " + this.isAlive + "\n");
     }
 
+    // ===== 2. INFO HEALTH PART =====
+
+    // Get Max Health Method -> Base health sekarang ditambah level yang sudah dikalikan increment health, ditambah lagi health dari armor
+    // Return: Base Health + (Increment Health * Level) + "Armor" Health
+    // Mendapatkan info pakai this, jika info nya ada di dalam class berarti pakai this
+    // Tidak langsung this.armor.getAddhHealth() karena harus dikalkulasikan terlebih dahulu
+    public int maxHealth(){
+        return this.baseHealth + this.level * this.incrementHealth + this.armor.getAddHealth();
+    }
+
+    // Get Health Method -> Return/kasihtau kita info max health yang dikurangi dengan total damage yang diterima dari musuh
+    // Return: Max Health - Total Damage
+    public int getHealth(){
+        return this.maxHealth() - this.totalDamage;
+    }
+
+    // ===== 3. BATTLE PART =====
+
+    //    Get Attack Power Method -> Memberikan info base attack ditambah level yang dikalikan dengan increment attack, ditambah lagi attack damage dari weapon
+    // Return: Base Health + (Increment Health * Level) + "Weapon" Attack Damage
+    // Tidak langsung this.weapon.getattack() karena harus dikalkulasikan terlebih dahulu
+    // KENAPA PRIVATE???
+    private int getAttackPower(){
+        return this.baseAttack + this.level * this.incrementAttack + this.weapon.getAttack();
+    }
+
+    // Get Name Method -> Return/Kasihtau kita info nama
+    // KENAPA HARUS GET NAME, KENAPA GAK, OPPONENT.THIS.NAME??
+    public String getName(){
+        return this.name;
+    }
+
+    //    Set Level Up Method
+    public void levelUp(){
+        this.level++;
+    }
+
+    // Attacking Method -> Menyerang lawan
+    // 1. Menyetting fungsi/method menerima parameter bernama opponent yang ber tipe Player (Opponent punya semua attribute yang ada di Player)
     public void attack(Player opponent){
         // Hitung damage
+        // 2. Membuat variable damage, dan mendapatkan info dari fungsi Attack Power
         int damage = this.getAttackPower();
+
+        // 3. Print Semuanya (Name + Opponent Name + Damage from get attack power)
         System.out.println("Player " + this.name + " is attacking " + opponent.getName() + " with " + damage);
 
         // Attacking Opponent
+        // 4. Menjalankan fungsi defence dengan memberikan info hasil "damage" untuk parameter defence
         opponent.defence(damage);
 
+        // 5. Setelah serangan maka terjadi level up
         this.levelUp();
     }
 
+    // 1. Fungsi menerima parameter berupa integer yang dinamakan damage
     public void defence(int damage){
 
         // Receive damage
+        // 2. Mengambil info defence power dari armor
         int defencePower = this.armor.getDefencePower();
+        // 3. Membuat variable delta damage, seperti final damage setelah dikurangi defence powernya
         int deltaDamage;
 
         System.out.println(this.name + " defence power = " + defencePower);
@@ -81,32 +135,6 @@ class Player{
         }
 
         this.display();
-    }
-
-    //    Set Level Up Method
-    public void levelUp(){
-        this.level++;
-    }
-
-    //    Get Attack Power Method
-    private int getAttackPower(){
-        return this.baseAttack + this.level * this.incrementAttack + this.weapon.getAttack();
-    }
-
-    //    Set Armor Method
-
-    public void setArmor(Armor armor){
-        this.armor = armor;
-    }
-
-    //    Set Weapon Method
-    public void setWeapon(Weapon weapon){
-        this.weapon = weapon;
-    }
-
-    //    Get Max Health Method
-    public int maxHealth(){
-        return this.baseHealth + this.level * this.incrementHealth + this.armor.getAddHealth();
     }
 }
 
@@ -169,6 +197,5 @@ public class Main {
         player1.attack(player2);
         player1.display();
         player2.display();
-
     }
 }

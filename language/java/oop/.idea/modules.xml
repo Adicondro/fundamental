@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/review/trash/Chapter2.iml" filepath="$PROJECT_DIR$/review/trash/Chapter2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/review/Chapter2_1/Chapter2_1.iml" filepath="$PROJECT_DIR$/review/Chapter2_1/Chapter2_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/review/Chapter3/Chapter3.iml" filepath="$PROJECT_DIR$/review/Chapter3/Chapter3.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter 1/ClassObject/ClassObject.iml" filepath="$PROJECT_DIR$/Chapter 1/ClassObject/ClassObject.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter 1/Constructor/Constructor.iml" filepath="$PROJECT_DIR$/Chapter 1/Constructor/Constructor.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter 1/Method/Method.iml" filepath="$PROJECT_DIR$/Chapter 1/Method/Method.iml" />
@@ -10,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/PublicPrivate/PublicPrivate.iml" filepath="$PROJECT_DIR$/PublicPrivate/PublicPrivate.iml" />
       <module fileurl="file://$PROJECT_DIR$/SetterGetter/SetterGetter.iml" filepath="$PROJECT_DIR$/SetterGetter/SetterGetter.iml" />
       <module fileurl="file://$PROJECT_DIR$/StaticClassAttribute/StaticClassAttribute.iml" filepath="$PROJECT_DIR$/StaticClassAttribute/StaticClassAttribute.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StaticClassMethod/StaticClassMethod.iml" filepath="$PROJECT_DIR$/StaticClassMethod/StaticClassMethod.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/oop.iml" filepath="$PROJECT_DIR$/.idea/oop.iml" />
       <module fileurl="file://$PROJECT_DIR$/review/review.iml" filepath="$PROJECT_DIR$/review/review.iml" />
     </modules>
