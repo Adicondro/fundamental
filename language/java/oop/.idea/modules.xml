@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/Chapter 1/ClassObject/ClassObject.iml" filepath="$PROJECT_DIR$/Chapter 1/ClassObject/ClassObject.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter 1/Constructor/Constructor.iml" filepath="$PROJECT_DIR$/Chapter 1/Constructor/Constructor.iml" />
       <module fileurl="file://$PROJECT_DIR$/HierarchyPackage/HierarchyPackage.iml" filepath="$PROJECT_DIR$/HierarchyPackage/HierarchyPackage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Inheritance/Inheritance.iml" filepath="$PROJECT_DIR$/Inheritance/Inheritance.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter 1/Method/Method.iml" filepath="$PROJECT_DIR$/Chapter 1/Method/Method.iml" />
       <module fileurl="file://$PROJECT_DIR$/MultiPackage/MultiPackage.iml" filepath="$PROJECT_DIR$/MultiPackage/MultiPackage.iml" />
       <module fileurl="file://$PROJECT_DIR$/ObjectReference/ObjectReference.iml" filepath="$PROJECT_DIR$/ObjectReference/ObjectReference.iml" />
