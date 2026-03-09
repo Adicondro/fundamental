@@ -12,4 +12,6 @@ public class HeroIntel extends Hero{
         super.display();
         System.out.println("Hero Type: " + this.type);
     }
+
+
 }
