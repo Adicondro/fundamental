@@ -24,7 +24,7 @@ typedef struct{
 
 int main(){
   i32 x = 123;
-  i32* px = &x
+  i32* px = &x;
 
   return 0;
 }

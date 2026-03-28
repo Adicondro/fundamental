@@ -10,6 +10,8 @@ public class Main {
         hero2.name = "Mountain Lady";
         // Hanya bisa di Hero Strength aja
         hero2.defencePower = 100;
+
+        // Yang keluar adalah display yang sudah dibuat oleh HeroStrength bukan hero
         hero2.display();
     }
 }

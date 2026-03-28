@@ -1,0 +1,254 @@
+# =============================================================================
+#  .gitignore — C Project
+#  Covers: CMake · Make · Ninja · VS Code · CLion · Eclipse CDT
+#          Vcpkg · Conan · Sanitizer outputs · OS files
+# =============================================================================
+
+
+# =============================================================================
+#  BUILD DIRECTORIES
+# =============================================================================
+build/
+build-*/           # build-debug, build-release, build-asan, etc.
+out/
+cmake-build-*/     # CLion's default: cmake-build-debug, cmake-build-release
+_build/
+dist/
+
+
+# =============================================================================
+#  CMAKE GENERATED FILES
+# =============================================================================
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+cmake_uninstall.cmake
+CTestTestfile.cmake
+CPackConfig.cmake
+CPackSourceConfig.cmake
+CPack*.cmake
+install_manifest.txt
+compile_commands.json      # generated — symlink to build/ instead
+CMakeDoxyfile.in
+CMakeDoxygenDefaults.cmake
+_deps/                     # FetchContent downloads
+
+# Package config generated files
+*Config.cmake
+*ConfigVersion.cmake
+*Targets.cmake
+*Targets-*.cmake
+
+
+# =============================================================================
+#  COMPILED OUTPUTS
+# =============================================================================
+
+# Object files
+*.o
+*.obj
+*.ko
+*.elf
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Static & shared libraries
+*.a
+*.la
+*.lo
+*.lib
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug symbols
+*.dSYM/
+*.su
+*.idb
+*.pdb
+*.map
+
+
+# =============================================================================
+#  MAKE / NINJA
+# =============================================================================
+Makefile             # if CMake-generated (keep if handwritten)
+GNUmakefile
+.ninja_deps
+.ninja_log
+build.ninja
+
+
+# =============================================================================
+#  TESTING & COVERAGE
+# =============================================================================
+Testing/             # CTest output directory
+LastTest.log
+LastTestsFailed.log
+CTestCostData.txt
+
+# Coverage (gcov / lcov)
+*.gcno
+*.gcda
+*.gcov
+lcov.info
+coverage.info
+coverage/
+html_coverage/
+
+# Sanitizer logs
+asan.log*
+ubsan.log*
+msan.log*
+tsan.log*
+
+
+# =============================================================================
+#  PACKAGE MANAGERS
+# =============================================================================
+
+# Vcpkg
+vcpkg_installed/
+.vcpkg-root
+
+# Conan
+.conan/
+conanbuildinfo.*
+conaninfo.txt
+conan.lock
+graph_info.json
+conan_toolchain.cmake
+CMakeUserPresets.json    # Conan 2.x generates this; keep if hand-authored
+
+
+# =============================================================================
+#  IDE — VS CODE + CMAKE TOOLS
+# =============================================================================
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/c_cpp_properties.json
+*.code-workspace
+.history/
+
+# IntelliSense & browse database
+.browse.VC.db
+.browse.VC.db-shm
+.browse.VC.db-wal
+ipch/
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+
+
+# =============================================================================
+#  IDE — CLION / JETBRAINS
+# =============================================================================
+.idea/
+*.iws
+*.iml
+*.ipr
+cmake-build-debug/
+cmake-build-release/
+cmake-build-relwithdebinfo/
+cmake-build-minsizerel/
+
+
+# =============================================================================
+#  IDE — ECLIPSE CDT
+# =============================================================================
+.settings/
+.project
+.cproject
+.autotools
+.metadata/
+RemoteSystemsTempFiles/
+Servers/
+.recommenders/
+*.launch
+*.prefs
+
+
+# =============================================================================
+#  ENVIRONMENT & SECRETS
+# =============================================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+
+# =============================================================================
+#  DOCUMENTATION
+# =============================================================================
+docs/html/           # Doxygen HTML output
+docs/latex/          # Doxygen LaTeX output
+docs/xml/
+Doxyfile.bak
+
+
+# =============================================================================
+#  OS GENERATED FILES
+# =============================================================================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+
+# =============================================================================
+#  MISC
+# =============================================================================
+*.tmp
+*.temp
+*.bak
+*.orig
+*.swp
+*.swo
+tags          # ctags / etags
+TAGS
+.cache/
+scratch/
+sandbox/
+local/
+
