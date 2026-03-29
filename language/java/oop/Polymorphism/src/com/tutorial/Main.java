@@ -4,24 +4,27 @@ package com.tutorial;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
   public static void main(String[] args) {
+
+    // THEORY
+
     Hero hero1 = new Hero("Ucup");
     HeroStrength hero2 = new HeroStrength("Otong");
-
-    hero1.display();
-    hero2.display();
-
     Hero hero3 = new HeroAgility("Maria");
     Hero hero4 = new HeroIntel("Mahmud");
-    // Ini bisa, karena polymorph, herostrength itu termasuk hero
-
-    hero3.display();
-    hero4.display();
-
-    // HeroIntel hero4 = new Hero("Heru");
+    // Ini bisa, karena polymorph, herostrength, heroagility, dan herointel itu termasuk hero
+    
+    // HeroIntel hero4 = new Hero("Heru"); 
     // Ini gaakan bisa karena herointel gapunya bagian dari hero
 
     // HeroIntel hero3 = new HeroStrength("Adi");
     // Ini juga gaakan bisa
+
+    hero1.display();
+    hero2.display();
+    hero3.display();
+    hero4.display();
+
+    // USE CASE
 
     // Array List
     Hero[] kumpulanHero = new Hero[3];
@@ -41,7 +44,7 @@ public class Main {
 
     // method calls
     // kumpulanHero[2].showoff();
-    // Gabisa dipanggil karena METHOD SHOW OFF tidak ada di class Hero
+    // Gabisa dipanggil karena METHOD SHOW OFF tidak ada di class Hero, dan sudah di casting ke Hero
     // hero3.showoff();
     // Bahkan ini juga tidak bisa, karena sudah di casting ke Hero
 
