@@ -2,7 +2,7 @@ package com.tutorial;
 
 class HeroStrength extends Hero{
 
-    // Problem: Jika membuat constructor hanya di SUPERCLASS -> ERROR di object dari class HeroStrength nya
+    // Problem: Jika membuat constructor hanya di SUPERCLASS -> ERROR di object dari subclass HeroStrength nya
     // 1. Ada solusi membuat constructor HANYA di subclass
     // 2. Tapi jika membuat hanya di SUBCLASS -> ERROR di object dari superclass Hero nya
 
