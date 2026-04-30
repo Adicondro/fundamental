@@ -10,12 +10,22 @@ public class Hero {
         this.health = health;
     }
 
-    // Aman kalau public, kalau private wajar gabisa diakses
     public double getHealth(){
         return this.health;
     }
 
-    void display(){
+    final void setHealth(double newHealth){
+        this.health = newHealth;
+    }
+
+    // Ternyata final masih bisa teroverload denagn visibility apapun jadi bisa terexpose
+    void setHealth(String mode){
+        if(mode.equals("reset")){
+            this.health = 100;
+        }
+    }
+
+    public void display(){
         System.out.println(this.name + " mempunyai " + this.health);
     }
 }

@@ -7,10 +7,25 @@ public class IntelHero extends Hero {
         super(name, health);
     }
 
-    // Walaupun method nya bisa diakses
-    public double getHealth(){
-        // Jika public nya tidak ditulis maka tidak bisa diakses
-        // Karena tidak boleh mengurangi visibility nya
-        return this.health; // ini tidak mau (karena kondisi data member health nya private)
+
+//    public double getHealth(){
+//        System.out.println(this.health);
+//    }
+
+    public void display(){
+        System.out.println(this.name + " mempunyai " + this.getHealth());
     }
+
+    // Mau final mau tanpa final, tidak bisa di overwrite
+//    final void setHealth (double newHealth){
+//        System.out.println("Mencoba memasukkan health = " + newHealth);
+//    }
+
+
+    // Lihat, masih bisa terexpose
+//    void setHealth (String newHealth){
+//        System.out.println("Mencoba memasukkan health = " + newHealth);
+//    }
+
+
 }
