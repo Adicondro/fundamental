@@ -1,4 +1,4 @@
-package com.tutorial;
+package com.hero;
 
 class Player {
     private String name;

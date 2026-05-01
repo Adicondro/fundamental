@@ -1,4 +1,4 @@
-package com.tutorial;
+package com.hero;
 
 class Matematika {
     public static int add(int x, int y){

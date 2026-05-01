@@ -1,4 +1,4 @@
-package com.tutorial;
+package com.hero;
 
 // Ini mengimport class console
 import com.terminal.Console;
