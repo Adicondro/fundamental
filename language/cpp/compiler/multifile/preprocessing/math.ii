@@ -1,0 +1,16 @@
+# 1 "math.cpp"
+# 1 "<built-in>" 1
+# 1 "<built-in>" 3
+# 531 "<built-in>" 3
+# 1 "<command line>" 1
+# 1 "<built-in>" 2
+# 1 "math.cpp" 2
+# 1 "./math.h" 1
+
+
+int tambah(int a, int b);
+# 2 "math.cpp" 2
+
+int tambah(int a, int b){
+  return a + b;
+}
